@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz App</title>
+    <link
+      rel="shortcut icon"
+      href="./images/Quiz-Image.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body
+    class="bg-primary min-vh-100 d-flex justify-content-center align-items-center"
+  >
+    <div class="bg-white px-3 py-4 rounded-2 w-75 shadow-lg">
+      <h1 class="pb-3 text-primary">Quizz App</h1>
+      <section class=" d-block" id="formSelectors">
+        <form class="my-4">
+          <div class="form-floating mb-4 shadow-sm">
+            <select
+              class="form-select focus-ring focus-ring-primary border-primary"
+              id="categoryMenu"
+              aria-label="Floating label select example"
+            >
+              <option selected value="">Any Category</option>
+              <option value="9">General Knowledge</option>
+              <option value="27">Animals</option>
+              <option value="19">Science: Mathematics</option>
+              <option value="18">Science: Computers</option>
+              <option value="22">Geography</option>
+            </select>
+            <label for="categoryMenu">Choose Category</label>
+          </div>
+          <div class="form-floating mb-4 shadow-sm">
+            <select
+              class="form-select focus-ring focus-ring-primary border-primary"
+              id="difficultyOptions"
+              aria-label="difficulty Select"
+            >
+              <option selected value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            <label for="difficultyOptions">Choose Difficulty Level</label>
+          </div>
+          <div class="form-floating mb-4 shadow-sm">
+            <input
+              type="number"
+              class="form-control focus-ring focus-ring-primary border-primary"
+              id="questionsNumber"
+              placeholder="Number of Questions"
+            />
+            <label for="QuestionsNumber">Number of Questions</label>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary d-block mx-auto px-5 fs-5 my-0 shadow-sm rounded-pill"
+            id="startQuiz"
+          >
+            Start
+          </button>
+        </form>
+      </section>
+      <section class="Question d-none" id="QuestionSection">
+        
+      </section>
+      <section class=" d-none " id="messageSection">
+        <h3 class="h1 text-center my-4">Opss 😞 your score is 0 of 2</h3>
+        <button
+          type="button"
+          class="btn btn-primary d-block mx-auto px-5 fs-5 my-0 shadow-sm rounded-pill"
+        >
+          Try Again
+        </button>
+      </section>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
